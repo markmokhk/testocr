@@ -8,3 +8,9 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 chrome-tmp/
+
+# Downloaded datasets (re-fetch with scripts/download_mnist.py)
+data/
+
+# Model checkpoints (scripts/train_mnist.py)
+checkpoints/
