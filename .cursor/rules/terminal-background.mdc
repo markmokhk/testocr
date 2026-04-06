@@ -1,0 +1,16 @@
+---
+description: Run long shell commands in background so the chat is not blocked
+alwaysApply: true
+---
+
+# Terminal: prefer background for long jobs
+
+When using the terminal tool for commands that may take more than roughly **20–30 seconds**—including but not limited to:
+
+- `python scripts/train_mnist.py`, training, or similar ML runs  
+- `pip install`, `conda install`, or large package installs  
+- Dataset downloads, `git clone` of large repos, or long builds  
+
+**Start execution in background immediately** (non-blocking / background mode), and poll or read the terminal output file until completion, instead of blocking until the command finishes. Do not rely on the user clicking “run in background” in the UI.
+
+Short commands (status checks, `git status`, quick scripts) may stay in the foreground.
